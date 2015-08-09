@@ -20,7 +20,10 @@ except (IOError, ImportError):
 
 package = 'tapioca_{{ cookiecutter.service_name|lower|replace(' ', '_') }}'
 requirements = [
-    'tapioca-wrapper==0.5.1',
+    'tapioca-wrapper<0.6.0',
+    {% if cookiecutter.use_oauth_2 == 'y' or cookiecutter.use_oauth_1 == 'y' %}
+    'requests-oauthlib==0.4.2',
+    {% endif %}
 ]
 test_requirements = [
 

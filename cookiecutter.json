@@ -1,5 +1,6 @@
 {
     "service_name": "The Name Of The Service Being Wrapped",
+    "api_root_url": "url to the root of the api",
     "full_name": "Filipe Ximenes",
     "email": "filipeximenes@gmail.com",
     "github_username": "filipeximenes",

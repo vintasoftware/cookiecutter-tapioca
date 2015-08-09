@@ -6,5 +6,5 @@
     "version": "0.1",
     "use_oauth_2": "n",
     "use_oauth_1": "n",
-    "use_basic_auth": "n",
+    "use_basic_auth": "n"
 }

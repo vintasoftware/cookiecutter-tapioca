@@ -61,7 +61,7 @@ if sys.argv[-1] == 'publish':
 
 
 setup(
-    name='{{ cookiecutter.service_name|lower|replace(' ', '-') }}',
+    name='tapioca-{{ cookiecutter.service_name|lower|replace(' ', '-') }}',
     version=get_version(package),
     description='{{ cookiecutter.service_name }} API wrapper using tapioca',
     long_description=readme,

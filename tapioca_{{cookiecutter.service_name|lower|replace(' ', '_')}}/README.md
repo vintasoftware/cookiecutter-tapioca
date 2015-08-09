@@ -2,7 +2,7 @@
 
 ## Instalation
 ```
-pip install {{ cookiecutter.service_name|lower|replace(' ', '-') }}
+pip install tapioca-{{ cookiecutter.service_name|lower|replace(' ', '-') }}
 ```
 
 ## Documentation

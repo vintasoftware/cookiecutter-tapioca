@@ -1,0 +1,10 @@
+{
+    "service_name": "The Name Of The Service Being Wrapped",
+    "full_name": "Filipe Ximenes",
+    "email": "filipeximenes@gmail.com",
+    "github_username": "filipeximenes",
+    "version": "0.1",
+    "use_oauth_2": "n",
+    "use_oauth_1": "n",
+    "use_basic_auth": "n",
+}

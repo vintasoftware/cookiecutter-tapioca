@@ -67,7 +67,7 @@ setup(
     long_description=readme,
     author=get_author(packge),
     author_email=get_email(package),
-    url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.service_name|lower|replace(' ', '-') }}',
+    url='https://github.com/{{ cookiecutter.github_username }}/tapioca-{{ cookiecutter.service_name|lower|replace(' ', '-') }}',
     packages=[
         'tapioca_{{ cookiecutter.service_name|lower|replace(' ', '_') }}',
     ],

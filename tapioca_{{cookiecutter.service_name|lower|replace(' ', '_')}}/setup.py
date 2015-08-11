@@ -68,7 +68,7 @@ setup(
     version=get_version(package),
     description='{{ cookiecutter.service_name }} API wrapper using tapioca',
     long_description=readme,
-    author=get_author(packge),
+    author=get_author(package),
     author_email=get_email(package),
     url='https://github.com/{{ cookiecutter.github_username }}/tapioca-{{ cookiecutter.service_name|lower|replace(' ', '-') }}',
     packages=[

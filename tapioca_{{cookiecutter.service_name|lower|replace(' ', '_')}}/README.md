@@ -1,6 +1,6 @@
 # Tapioca {{ cookiecutter.service_name }}
 
-## Instalation
+## Installation
 ```
 pip install tapioca-{{ cookiecutter.service_name|lower|replace(' ', '-') }}
 ```

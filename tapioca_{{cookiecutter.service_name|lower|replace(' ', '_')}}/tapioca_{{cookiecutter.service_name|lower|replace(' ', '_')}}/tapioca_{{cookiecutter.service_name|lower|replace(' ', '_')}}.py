@@ -24,8 +24,8 @@ class {{ cookiecutter.service_name|title|replace(' ', '') }}ClientAdapter(JSONAd
         {% if cookiecutter.use_oauth_2 == 'y' %}
         params['auth'] = OAuth2(
             api_params.get('client_id', ''), token={
-            'access_token': api_params.get('access_token'),
-            'token_type': 'Bearer'})
+                'access_token': api_params.get('access_token'),
+                'token_type': 'Bearer'})
         {% elif cookiecutter.use_oauth_1 == 'y' %}
         params['auth'] = OAuth1(
             api_params.get('api_key'),
@@ -42,8 +42,8 @@ class {{ cookiecutter.service_name|title|replace(' ', '') }}ClientAdapter(JSONAd
     def get_iterator_list(self, response_data):
         return response_data
 
-    def get_iterator_next_request_kwargs(self,
-            iterator_request_kwargs, response_data, response):
+    def get_iterator_next_request_kwargs(self, iterator_request_kwargs,
+                                         response_data, response):
         pass
 
 

@@ -7,8 +7,8 @@ try:
 except ImportError:
     from distutils.core import setup
 
-import re
 import os
+import re
 import sys
 
 try:
@@ -21,20 +21,22 @@ except (IOError, ImportError):
 package = 'tapioca_{{ cookiecutter.service_name|lower|replace(' ', '_') }}'
 requirements = [
     'tapioca-wrapper<0.7.0',
-    {% if cookiecutter.use_oauth_2 == 'y' or cookiecutter.use_oauth_1 == 'y' %}
+{% if cookiecutter.use_oauth_2 == 'y' or cookiecutter.use_oauth_1 == 'y' %}
     'requests-oauthlib==0.4.2',
-    {% endif %}
+{% endif %}
 ]
 test_requirements = [
 
 ]
+
 
 def get_version(package):
     """
     Return package version as listed in `__version__` in `init.py`.
     """
     init_py = open(os.path.join(package, '__init__.py')).read()
-    return re.search("^__version__ = ['\"]([^'\"]+)['\"]", init_py, re.MULTILINE).group(1)
+    return re.search("^__version__ = ['\"]([^'\"]+)['\"]",
+                     init_py, re.MULTILINE).group(1)
 
 
 def get_author(package):
@@ -42,7 +44,8 @@ def get_author(package):
     Return package author as listed in `__author__` in `init.py`.
     """
     init_py = open(os.path.join(package, '__init__.py')).read()
-    return re.search("^__author__ = ['\"]([^'\"]+)['\"]", init_py, re.MULTILINE).group(1)
+    return re.search("^__author__ = ['\"]([^'\"]+)['\"]",
+                     init_py, re.MULTILINE).group(1)
 
 
 def get_email(package):
@@ -50,7 +53,8 @@ def get_email(package):
     Return package email as listed in `__email__` in `init.py`.
     """
     init_py = open(os.path.join(package, '__init__.py')).read()
-    return re.search("^__email__ = ['\"]([^'\"]+)['\"]", init_py, re.MULTILINE).group(1)
+    return re.search("^__email__ = ['\"]([^'\"]+)['\"]",
+                     init_py, re.MULTILINE).group(1)
 
 
 # python setup.py register

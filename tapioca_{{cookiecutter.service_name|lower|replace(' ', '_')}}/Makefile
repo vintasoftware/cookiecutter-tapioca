@@ -32,7 +32,7 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	flake8 tapioca-facebook tests
+	flake8 tapioca-{{ cookiecutter.service_name|lower|replace(' ', '-') }} tests
 
 test:
 	python setup.py test
@@ -41,15 +41,15 @@ test-all:
 	tox
 
 coverage:
-	coverage run --source tapioca-facebook setup.py test
+	coverage run --source tapioca-{{ cookiecutter.service_name|lower|replace(' ', '-') }} setup.py test
 	coverage report -m
 	coverage html
 	open htmlcov/index.html
 
 docs:
-	rm -f docs/tapioca-facebook.rst
+	rm -f docs/tapioca-{{ cookiecutter.service_name|lower|replace(' ', '-') }}.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ tapioca-facebook
+	sphinx-apidoc -o docs/ tapioca-{{ cookiecutter.service_name|lower|replace(' ', '-') }}
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	open docs/_build/html/index.html

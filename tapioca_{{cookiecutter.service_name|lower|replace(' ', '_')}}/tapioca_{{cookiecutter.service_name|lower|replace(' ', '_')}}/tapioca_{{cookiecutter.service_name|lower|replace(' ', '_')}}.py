@@ -10,7 +10,7 @@ from requests_oauthlib import OAuth1
 from requests.auth import HTTPBasicAuth
 {% endif %}
 
-from resource_mapping import RESOURCE_MAPPING
+from .resource_mapping import RESOURCE_MAPPING
 
 
 class {{ cookiecutter.service_name|title|replace(' ', '') }}ClientAdapter(JSONAdapterMixin, TapiocaAdapter):
